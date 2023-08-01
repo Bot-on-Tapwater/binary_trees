@@ -17,7 +17,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	/* mem alloc check */
 	if (new_left_child == NULL)
 	{
-		printf("\n\tMalloc failed");
+		/* printf("\n\tMalloc failed"); */
 		return (NULL);
 	}
 
