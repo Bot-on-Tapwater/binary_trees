@@ -30,9 +30,12 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	binary_tree_t *uncle = binary_tree_sibling(node->parent);
+	binary_tree_t *uncle = malloc(sizeof(binary_tree_t));
+	if (uncle == NULL)
+		return (NULL);
+	uncle = binary_tree_sibling(node->parent);
 
-	if (node == NULL || uncle == NULL)
+	if (node == NULL)
 		return (NULL);
 
 	return (uncle);
